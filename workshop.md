@@ -1,177 +1,177 @@
 author: Your Name
-summary: GitHub Copilot ワークショップ
+summary: GitHub Copilot Workshop
 id: github-copilot-workshop
 categories: AI, Development
 environments: Web
 status: Published
 feedback link: https://example.com/feedback
 
-# GitHub Copilot ワークショップ
+# GitHub Copilot Workshop
 
-## ワークショップについて
+## About the Workshop
 Duration: 5
 
-GitHub Copilotワークショップへようこそ！このワークショップでは、GitHub Copilot を使ってコードの解説や改善を行う方法を学びます。
-GitHub Copilot Chat は Chat 体験を通じて AI との対話を行うことができます。 ぜひ、このワークショップを通じて GitHub Copilot の使い方を学んでみましょう。
+Welcome to the GitHub Copilot Workshop! In this workshop, you'll learn how to use GitHub Copilot to explain and improve code.
+GitHub Copilot Chat allows you to interact with AI through a chat experience. Let's learn how to use GitHub Copilot through this workshop.
 
 ![GitHub Copilot Logo](github-copilot-workshop/img/octocat_copilot.png)
 
-### 本日のゴール
-- GitHub Copilotの各種機能を理解する
-- エージェントモードを使って、新規にアプリケーションを開発する
+### Today's Goals
+- Understand the various features of GitHub Copilot
+- Use agent mode to develop new applications
 
-### 前提条件
-- Visual Studio Code がインストールされていること
-- GitHub Copilotのライセンスがあること
-- GitHubアカウントを持っていること
+### Prerequisites
+- Visual Studio Code must be installed
+- Have a GitHub Copilot license
+- Have a GitHub account
 
-## プロジェクトのセットアップ
+## Project Setup
 Duration: 15
 
-このワークショップでは、以下のGitHubリポジトリを使用します：
+This workshop uses the following GitHub repository:
 
-**プロジェクトURL**: https://github.com/moulongzhang/20250708-Python-Project
+**Project URL**: https://github.com/moulongzhang/20250708-Python-Project
 
-### セットアップ方法
+### Setup Methods
 
-以下のいずれかの方法でプロジェクトを開始できます：
+You can start the project using one of the following methods:
 
-### 方法1: GitHub Codespacesを使用する（推奨）
+### Method 1: Use GitHub Codespaces (Recommended)
 
-1. 上記のプロジェクトURLをブラウザで開く
-2. 緑色の **Code** ボタンをクリック
-3. **Codespaces** タブを選択
-4. **Create codespace on main** をクリック
+1. Open the project URL above in your browser
+2. Click the green **Code** button
+3. Select the **Codespaces** tab
+4. Click **Create codespace on main**
 
 ![Codespaces Setup](github-copilot-workshop/img/github-codespaces.png)
 
 > aside positive
 >
-> **ヒント**: Codespacesを使用すると、ブラウザ上でVS Codeと同じ環境が立ち上がり、すぐに開発を始められます。
+> **Tip**: Using Codespaces launches the same environment as VS Code in your browser, allowing you to start developing immediately.
 
 
-### 方法2: ローカル環境でクローンする
+### Method 2: Clone to Local Environment
 
-ローカルにVS Codeがインストールされている場合：
+If you have VS Code installed locally:
 
-1. ターミナルまたはコマンドプロンプトを開く
-2. 以下のコマンドでリポジトリをクローン：
+1. Open terminal or command prompt
+2. Clone the repository with the following command:
 
 ```bash
 git clone https://github.com/moulongzhang/20250708-Python-Project.git
 ```
 
-3. クローンしたディレクトリに移動：
+3. Navigate to the cloned directory:
 
 ```bash
 cd 20250708-Python-Project
 ```
 
-4. VS Codeでプロジェクトを開く：
+4. Open the project in VS Code:
 
 ```bash
 code .
 ```
 
-### 必要な拡張機能のインストール
+### Installing Required Extensions
 
-プロジェクトを開いたら、以下の拡張機能をインストールしてください：
+Once you have the project open, install the following extensions:
 
-1. **GitHub Copilot** 拡張機能をインストール
-2. **GitHub Copilot Chat** 拡張機能をインストール
-3. **Python** 拡張機能をインストール
+1. Install the **GitHub Copilot** extension
+2. Install the **GitHub Copilot Chat** extension
+3. Install the **Python** extension
 
-### 設定確認
+### Configuration Check
 
-1. VS CodeでGitHubアカウントにサインインが完了していることを確認
-2. Copilot機能が有効になっていることを確認
-3. Pythonインタープリターが正しく設定されていることを確認
+1. Confirm that you are signed in to your GitHub account in VS Code
+2. Verify that the Copilot feature is enabled
+3. Verify that the Python interpreter is correctly configured
 
-## コード補完を使ってみる
+## Try Code Completion
 Duration: 10
 
-GitHub Copilotの基本的なコード補完機能を体験してみましょう。
+Let's experience GitHub Copilot's basic code completion features.
 
-### Copilot拡張機能のインストール
+### Installing Copilot Extensions
 
-1. **GitHub Copilot** 拡張機能をインストール
-2. **GitHub Copilot Chat** 拡張機能をインストール
+1. Install the **GitHub Copilot** extension
+2. Install the **GitHub Copilot Chat** extension
 
-### 設定確認
-VS Codeでサインインが完了していることを確認してください。
+### Configuration Check
+Please confirm that sign-in is complete in VS Code.
 
-### コード補完を試してみる
+### Try Code Completion
 
-新しいPythonファイルを作成して、以下のコメントを入力してみましょう：
+Create a new Python file and try entering the following comment:
 
 ```python
-# Fibonacci数列を計算する関数
+# Function to calculate Fibonacci sequence
 def fibonacci(n):
 ```
 
-Copilotが自動的にコードを提案してくれることを確認してください。
+Confirm that Copilot automatically suggests code.
 
 > aside positive
 >
-> **ヒント**: `Tab`キーで提案を受け入れ、`Alt+]`で次の提案を見ることができます。
+> **Tip**: Use the `Tab` key to accept suggestions, and `Alt+]` to see the next suggestion.
 
-## GitHub Copilot Next Edit Suggestions 有効化手順
+## GitHub Copilot Next Edit Suggestions Activation Steps
 Duration: 10
 
-### 概要
-⚙️ [`github.copilot.nextEditSuggestions.enabled`](vscode://settings/github.copilot.nextEditSuggestions.enabled) は、GitHub Copilotの次世代編集提案機能を有効にする設定です。この機能により、より高度なコード編集の提案を受け取ることができます。
+### Overview
+⚙️ [`github.copilot.nextEditSuggestions.enabled`](vscode://settings/github.copilot.nextEditSuggestions.enabled) is a setting that enables GitHub Copilot's next-generation edit suggestion feature. This feature allows you to receive more advanced code editing suggestions.
 
-### 1. VS Codeを開く
+### 1. Open VS Code
 
-### 2. 設定画面にアクセス
-以下のいずれかの方法で設定画面を開きます：
+### 2. Access Settings
+Open the settings screen using one of the following methods:
 
-#### 方法A: メニューから
+#### Method A: From Menu
 - **Windows/Linux**: `File` → `Preferences` → `Settings`
 - **macOS**: `Code` → `Settings...` → `Settings`
 
-#### 方法B: キーボードショートカット
+#### Method B: Keyboard Shortcut
 - **Windows/Linux**: `Ctrl + ,`
 - **macOS**: `Cmd + ,`
 
-#### 方法C: コマンドパレット
-- `Ctrl + Shift + P` (Windows/Linux) または `Cmd + Shift + P` (macOS)
-- `Preferences: Open Settings (UI)` を選択
+#### Method C: Command Palette
+- `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
+- Select `Preferences: Open Settings (UI)`
 
-### 3. 設定を検索
-設定画面の検索ボックスに以下を入力：
+### 3. Search Settings
+Enter the following in the settings search box:
 ```
 github.copilot.nextEditSuggestions.enabled
 ```
 
-### 4. 設定を有効化
-- 検索結果に表示される設定項目のチェックボックスをオンにする
-- または、`false` を `true` に変更する
+### 4. Enable Setting
+- Check the checkbox for the setting item displayed in search results
+- Or change `false` to `true`
 
-### 5. 設定の確認
-設定が正しく適用されているか確認：
-- VS Codeを再起動（推奨）
-- エディタでコードを編集して、新しい提案機能が動作するか確認
+### 5. Confirm Settings
+Verify that the setting has been applied correctly:
+- Restart VS Code (recommended)
+- Edit code in the editor to confirm that the new suggestion feature is working
 
-### 代替方法: settings.jsonで直接編集
+### Alternative Method: Direct Editing in settings.json
 
-#### 1. settings.jsonファイルを開く
-- `Ctrl + Shift + P` (Windows/Linux) または `Cmd + Shift + P` (macOS)
-- `Preferences: Open User Settings (JSON)` を選択
+#### 1. Open settings.json File
+- `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
+- Select `Preferences: Open User Settings (JSON)`
 
-#### 2. 設定を追加
+#### 2. Add Setting
 ```json
 {
     "github.copilot.nextEditSuggestions.enabled": true
 }
 ```
 
-#### 3. ファイルを保存
-- `Ctrl + S` (Windows/Linux) または `Cmd + S` (macOS)
+#### 3. Save File
+- `Ctrl + S` (Windows/Linux) or `Cmd + S` (macOS)
 
-### 実際に試してみよう
+### Let's Try It Out
 
-プロジェクトに含まれている `point.py` ファイルを開いてください。このファイルには、二次元空間の点を表すクラスが含まれています：
+Please open the `point.py` file included in the project. This file contains a class representing a point in two-dimensional space:
 
 ```python
 import math
@@ -190,27 +190,27 @@ class Point2D:
         return f"Point2D({self.x}, {self.y})"
 ```
 
-今、このクラスを三次元空間の点を表すクラスに拡張したいと考えています。まずは、クラス名を手動で `Point3D` に変更してみましょう。すると、GitHub Copilotが次の編集候補を提案してくれます。
+Now, we want to extend this class to represent a point in three-dimensional space. First, let's manually change the class name to `Point3D`. Then, GitHub Copilot will suggest the next edit.
 
 > aside positive
 >
-> **重要**: Next Edit Suggestionの提案が表示されるまでに、少し時間がかかることがあります。焦らず待ってみてください。
+> **Important**: It may take a little time for Next Edit Suggestion proposals to appear. Please wait patiently.
 
-提案では以下のような変更が示されるはずです：
-- `__init__`メソッドに `z` パラメータの追加
-- `self.z = z` の追加
-- `distance_to`メソッドでの三次元距離計算への拡張
-- `__str__`メソッドでのz座標の表示
+The suggestion should show changes like:
+- Adding `z` parameter to the `__init__` method
+- Adding `self.z = z`
+- Extending the `distance_to` method for three-dimensional distance calculation
+- Displaying z-coordinate in the `__str__` method
 
-この状態で `Tab` キーを押すと、GitHub Copilotが提案をしている箇所にカーソルが移動します。そこで、提案を受け入れるには、再度 `Tab` キーを押します。
+In this state, pressing the `Tab` key will move the cursor to the location where GitHub Copilot is making suggestions. To accept the suggestion, press the `Tab` key again.
 
-すると、GitHub Copilotは次の編集候補を提案してくれるはずです。この提案も、`Tab` キーを押すことで受け入れることができます。このように、Next Edit Suggestionを使うことで、コードの編集を効率的に行うことができます。
+Then, GitHub Copilot should suggest the next edit. You can also accept this suggestion by pressing the `Tab` key. This way, you can efficiently edit code using Next Edit Suggestion.
 
-### 結果を見てみよう
+### Let's See the Results
 
-Point2DクラスをPoint3Dに拡張する作業を続けてみましょう。すべてのメソッドを三次元空間に対応させることができるはずです。
+Let's continue working on extending the Point2D class to Point3D. You should be able to adapt all methods for three-dimensional space.
 
-期待される最終的なコードの例：
+Example of expected final code:
 
 ```python
 import math
@@ -231,51 +231,51 @@ class Point3D:
         return f"Point3D({self.x}, {self.y}, {self.z})"
 ```
 
-### TODOコメント付きのコードでも試してみましょう
+### Let's Also Try with TODO-commented Code
 
-１行目でコメントアウトされている`二次元`を `三次元`に置き換えてください。
+Please change the commented "二次元" (two-dimensional) in the first line to "三次元" (three-dimensional).
 
 ```python
-# 二次元空間の点を表すクラス
+# Class representing a point in two-dimensional space
 class Point2D:
     def __init__(self, x, y):
         self.x = x
         self.y = y
     
     def distance_to(self, other):
-        # TODO: ここに距離計算のコードを追加
+        # TODO: Add distance calculation code here
         pass
     
     def __str__(self):
-        # TODO: 文字列表現を返す
+        # TODO: Return string representation
         pass
 ```
 
-TODOコメントの後にカーソルを置いて、Copilotの提案を確認してみてください。
+Place your cursor after the TODO comments and check Copilot's suggestions.
 
-### 注意事項
+### Precautions
 
-- VS Code の GitHub Copilot 拡張機能が最新版にアップデートされていることを確認してください
-- 設定変更後は VS Code の再起動を推奨します
+- Make sure VS Code's GitHub Copilot extension is updated to the latest version
+- We recommend restarting VS Code after changing settings
 
-### トラブルシューティング
+### Troubleshooting
 
-#### 設定が見つからない場合
-1. GitHub Copilot 拡張機能がインストールされているか確認
-2. 拡張機能が最新版にアップデートされているか確認
-3. VS Code を再起動してから再度試行
+#### When Setting Cannot be Found
+1. Confirm that the GitHub Copilot extension is installed
+2. Check if the extension is updated to the latest version
+3. Restart VS Code and try again
 
-#### 機能が動作しない場合
-1. GitHub Copilot にログインしているか確認
-2. インターネット接続を確認
-3. VS Code のコンソールでエラーメッセージを確認
+#### When Feature Doesn't Work
+1. Confirm that you are logged in to GitHub Copilot
+2. Check internet connection
+3. Check for error messages in VS Code console
 
-## Copilot Chat ハンズオンの準備
+## Copilot Chat Hands-On Preparation
 Duration: 5
 
-### ファイルを作成
+### Create File
 
-下記のファイルを `delivery_manager.py` として保存してください。
+Please save the following file as `delivery_manager.py`.
 
 ```python
 import time
@@ -529,357 +529,359 @@ if __name__ == "__main__":
     print(f"成功したレシピ数: {delivery_manager.get_successful_recipes_amount()}")
 ```
 
-## コードを解説してもらう
+## Explain Code
 Duration: 15
 
-Copilot Chat にこのコードを解説させてみましょう。
+Let's have Copilot Chat explain this code.
 
-### Copilot Chat を開く
+### Open Copilot Chat
 
-1. VS Codeのサイドバーで **Chat** アイコン（チャットバブルのアイコン）をクリックして、Copilot Chat を開きます
-2. または `Ctrl+Alt+I` (macOSでは `Ctrl+Cmd+I`) でChatパネルを開く
+1. Click the **Chat** icon (chat bubble icon) in VS Code's sidebar to open Copilot Chat
+2. Or open the Chat panel with `Ctrl+Alt+I` (on macOS `Ctrl+Cmd+I`)
 
-### チャットモードの確認
+### Check Chat Mode
 
-チャットのモードが「質問」になっていることを確認します（「エージェント」モードは後ほど紹介します）。
+Confirm that the chat mode is set to "Question" (we'll introduce "Agent" mode later).
 
-### /explain コマンドを使用
+### Use /explain Command
 
-1. チャット欄に `/explain` と入力します
-2. そうすると、チャット欄に `/explain` コマンドが展開され、候補として **@workspace /explain** と **@termianl /explain** が表示されます
-3. **@workspace /explain** を選択し、`#delivery_manager.py` と入力します。
-4. Enterを押すと、Copilot Chat が `delivery_manager.py` ファイル全体を解説してくれます
+1. Type `/explain` in the chat field
+2. The `/explain` command will expand in the chat field, showing candidates **@workspace /explain** and **@terminal /explain**
+3. Select **@workspace /explain** and type `#delivery_manager.py`
+4. Press Enter and Copilot Chat will explain the entire `delivery_manager.py` file
 
 > aside positive
 >
-> **ヒント**: ファイル名の前に `#` を付けることで、そのファイル全体をコンテキストとして含めることができます。
+> **Tip**: By adding `#` before a filename, you can include the entire file as context.
 
-## コードの改善箇所を尋ねる
+## Ask About Code Improvement Areas
 Duration: 15
 
-### エクササイズ
+### Exercise
 
-Copilot Chat にこのコードの悪い部分を尋ねてみましょう。
+Let's ask Copilot Chat about the problematic parts of this code.
 
-### 1. クラス全体の問題を聞く
+### 1. Ask About Overall Class Issues
 
-まずは、クラス全体としてこのコードはどのような問題を抱えているか聞いてみましょう。
+First, let's ask what kind of problems this code has as a whole class.
 
-Copilot Chatに以下のように質問してみてください：
-
-```
-このDeliveryManagerクラス全体を見て、どのような問題や改善点がありますか？設計パターン、コードの品質、保守性の観点から教えてください。
-```
-
-### 2. 具体的なメソッドに絞って改善点を聞く
-
-その後、`deliver_recipe()` メソッドに絞って、このメソッドを改善するためにはどのような方法があるか聞いてみましょう。
-
-#### 手順：
-1. チャット欄に `#deliver_recipe` と入力します
-2. コードの要素（関数、クラス、変数など）の候補が表示されます
-3. `deliver_recipe` メソッドを選択します
-4. 以下の質問を入力してください：
+Ask Copilot Chat the following:
 
 ```
-このdeliver_recipeメソッドを改善するためにはどのような方法がありますか？可読性、パフォーマンス、エラーハンドリングの観点から提案してください。
+Looking at this DeliveryManager class as a whole, what problems or improvement points are there? Please tell me from the perspectives of design patterns, code quality, and maintainability.
+```
+
+### 2. Focus on Specific Methods to Ask About Improvements
+
+Then, let's focus on the `deliver_recipe()` method and ask what methods there are to improve this method.
+
+#### Steps:
+1. Type `#deliver_recipe` in the chat field
+2. Candidates for code elements (functions, classes, variables, etc.) will be displayed
+3. Select the `deliver_recipe` method
+4. Enter the following question:
+
+```
+What methods are there to improve this deliver_recipe method? Please suggest from the perspectives of readability, performance, and error handling.
 ```
 
 > aside positive
 >
-> **ヒント**: `#` を使うことで、特定のコードの要素に対してピンポイントで質問することができます。これにより、より具体的で有用な改善提案を得ることができます。
+> **Tip**: By using `#`, you can ask questions about specific code elements in a pinpointed way. This allows you to get more specific and useful improvement suggestions.
 
-### コードレビュー機能
+### Code Review Function
 
-現在のコードを改善するために、Copilot Chatに以下のように質問してみましょう：
-
-```
-このPythonコードを改善してください。パフォーマンス、可読性、エラーハンドリングの観点から提案をお願いします。
-```
-
-### セキュリティの観点から確認
+To improve the current code, let's ask Copilot Chat the following:
 
 ```
-このコードにセキュリティ上の問題はありますか？
+Please improve this Python code. I'd like suggestions from the perspectives of performance, readability, and error handling.
 ```
 
-### ベストプラクティスの確認
+### Check from Security Perspective
 
 ```
-Pythonのベストプラクティスに従っているか確認してください。
+Are there any security issues in this code?
 ```
 
-## エージェントモードを使ってみよう
+### Check Best Practices
+
+```
+Please check if this follows Python best practices.
+```
+
+## Try Using Agent Mode
 Duration: 10
 
-ここまでは「質問」モードでCopilot Chatを使ってきましたが、次は「エージェント」モードを使ってみましょう。エージェントは、ユーザーの意図を理解し、より自律的にタスクを実行することができます。実例を通して、エージェントがどのように機能するかを学びます。
+Up to this point, we've been using Copilot Chat in "Question" mode, but now let's try "Agent" mode. Agents can understand user intent and execute tasks more autonomously. Through practical examples, we'll learn how agents function.
 
-### エージェントモードへの切り替え
+### Switching to Agent Mode
 
-まず `delivery_manager.py` ファイルを開いている状態で、Copilot Chatのモード選択から「エージェント」を選択します。
+First, with the `delivery_manager.py` file open, select "Agent" from the mode selection in Copilot Chat.
 
 <div align="center">
-  <img src="github-copilot-workshop/img/agent_mode2.png" alt="エージェントモード選択2" width="600" />
+  <img src="github-copilot-workshop/img/agent_mode2.png" alt="Agent mode selection 2" width="600" />
   
   <div style="height: 24;"></div>
   
-  <img src="github-copilot-workshop/img/agent_mode.png" alt="エージェントモード選択" width="600" />
+  <img src="github-copilot-workshop/img/agent_mode.png" alt="Agent mode selection" width="600" />
 </div>
 
-### 問題点の洗い出し
+### Identifying Problems
 
-その後、以下のプロンプトを入力してみましょう。
-
-```
-DeliveryManagerクラスに存在する問題点を列挙してください。そして、それぞれの問題点を解決するための改善案を提示してください。
-```
-
-![GPT-4.1による問題点分析](github-copilot-workshop/img/agent_GPT4.1.png)
-
-すると、複数の改善点を提案してくれるはずです。
-
-### モデルを変えて試してみてください
-
-同じ質問を異なるモデルで試すことで、各モデルの特徴を比較できます。
-
-![Claude 4.0による問題点分析](github-copilot-workshop/img/agent_Calude4.0.png)
-
-### 改善案の実装
-
-では、実際に提案してもらった改善案を実装してもらいましょう。
+After that, try entering the following prompt:
 
 ```
-提示してくれたすべての改善案を実装してください。
+Please list the problems that exist in the DeliveryManager class. Then, present improvement suggestions to solve each problem.
 ```
 
-すると、Copilotはエディタで開かれているコードに対して直接コードの変更を行います。しかし、これはまだ提案の段階であり、この変更を受け入れるかどうかはユーザーが決定します。受け入れるかどうかは、チャット欄の上にある「保持」もしくは「元に戻す」ボタンをクリックすることで行います。
+![Problem analysis by GPT-4.1](github-copilot-workshop/img/agent_GPT4.1.png)
 
-### エージェントの自律性
+This should suggest multiple improvement points.
 
-ここで、エージェントが返してくれたコメントを確認してみましょう。エージェントは単に指示に従ってコードを変更しただけでなく、コードを変更後にエラーが発生していることを確認し、そのエラーも修正しようとする場合があります。適切な環境下では、エージェントはコードの変更後に発生したエラーを自動的に検出し、修正を試みます。このように、エージェントはユーザーの意図を理解し、より自律的にタスクを実行することができます。
+### Try with Different Models
 
-### コマンド実行の確認
+By trying the same question with different models, you can compare the characteristics of each model.
 
-エージェントモードを使っていると、Copilotがコマンドを実行して良いかどうかを尋ねてくることがあります。これは、Copilotが何かのコマンドを実行する前に、必ずユーザーに確認を求めるためです。コマンドの内容を確認し、実行しても問題ない場合は「Allow this time」をクリックします。これにより、Copilotはそのコマンドを実行し、必要な変更を行います。
+![Problem analysis by Claude 4.0](github-copilot-workshop/img/agent_Calude4.0.png)
+
+### Implementing Improvements
+
+Now, let's have the suggested improvements actually implemented.
+
+```
+Please implement all the improvement suggestions you provided.
+```
+
+Then, Copilot will make direct code changes to the code open in the editor. However, this is still at the suggestion stage, and it's up to the user to decide whether to accept these changes. You can accept or reject them by clicking the "Keep" or "Discard" buttons above the chat field.
+
+### Agent Autonomy
+
+Here, let's check the comments returned by the agent. The agent doesn't just change code according to instructions, but may also confirm that errors are occurring after code changes and try to fix those errors. In appropriate environments, the agent automatically detects errors that occur after code changes and attempts to fix them. In this way, agents can understand user intent and execute tasks more autonomously.
+
+### Command Execution Confirmation
+
+When using agent mode, Copilot may ask whether it's okay to execute commands. This is because Copilot always asks for user confirmation before executing any command. Check the command content, and if there's no problem with execution, click "Allow this time". This allows Copilot to execute that command and make necessary changes.
 
 > aside positive
 >
-> **重要**: エージェントモードでは、Copilotがより自律的に動作するため、提案される変更内容をよく確認してから受け入れるようにしましょう。
+> **Important**: In agent mode, Copilot operates more autonomously, so make sure to carefully check the proposed changes before accepting them.
 
-## ポモドーロタイマーを作ってみよう
+## Let's Create a Pomodoro Timer
 Duration: 30
 
-ここまでで、VS Code上で利用できるGitHub Copilotの基本的な使い方を学びました。次は、実際にアプリケーションを開発してみましょう。
+Up to this point, we've learned the basic usage of GitHub Copilot available on VS Code. Next, let's actually develop an application.
 
-今回のハンズオンでは、ポモドーロタイマーアプリケーションを開発します。このアプリケーションは、作業時間と休憩時間を設定し、タイマーを管理する機能を持っています。
+In this hands-on session, we'll develop a Pomodoro timer application. This application has functionality to set work time and break time and manage timers.
 
-以下のようなUIを持つアプリケーションを作成することを目指します。
+We aim to create an application with a UI like the following:
 
-![ポモドーロタイマーUI](github-copilot-workshop/img/pomodoro.png)
+![Pomodoro Timer UI](github-copilot-workshop/img/pomodoro.png)
 
-では、まずVS Code上で、新しいPythonファイルを作成しましょう。今回はWebアプリケーションとして作成したいので、Flaskを使用します。メインファイル名は「app.py」としましょう。
+First, let's create a new Python file on VS Code. Since we want to create this as a web application, we'll use Flask. Let's name the main file "app.py".
 
-### プロジェクトの概要
+### Project Overview
 
-ポモドーロテクニック用のWebタイマーアプリケーションを作成します。
+We'll create a web timer application for the Pomodoro Technique.
 
-### 必要な機能
-- 25分の作業タイマー
-- 5分の休憩タイマー
-- タイマーの開始・停止・リセット
-- 進捗表示と統計機能
-- ブラウザ通知とサウンド通知
-- レスポンシブなWebUI
+### Required Features
+- 25-minute work timer
+- 5-minute break timer
+- Timer start/stop/reset
+- Progress display and statistics
+- Browser notifications and sound notifications
+- Responsive web UI
 
-## ポモドーロタイマーの設計を考える
+## Consider Pomodoro Timer Design
 Duration: 10
 
-まず、いきなり実装を始めるのではなく、どういった方針・設計で進めるかをCopilotに相談してみましょう。ここから先は、すべてエージェントモードで進めていきます。
+First, instead of starting implementation immediately, let's consult with Copilot about what approach and design to proceed with. From here on, we'll proceed entirely in agent mode.
 
-今回のようにUIを持ったWebアプリケーションを作成するにあたって役に立つのが、Copilot Chatに画像をアップロードする機能です。これを使うことで、アプリケーションのUIイメージをCopilotに理解させることができます。
+When creating web applications with UI like this time, what's useful is the ability to upload images to Copilot Chat. By using this, you can make Copilot understand the UI image of the application.
 
-前ページのUIイメージをまずはプロジェクトのルートに `pomodoro.png` として保存してください。その後、チャット欄の `Add Context` をクリックし、「Image from Clipboard」または「Files & Folders...」を選択します。そして、UIイメージの画像を選択します。
+First, save the UI image from the previous page as `pomodoro.png` in the project root. Then, click `Add Context` in the chat field and select "Image from Clipboard" or "Files & Folders...". Then select the UI image.
 
 ![VS Code Copilot Chat Context Menu](github-copilot-workshop/img/add_context2.png)
 
 ![VS Code Copilot Chat Context Menu](github-copilot-workshop/img/add_context3.png)
 
-画像のアップロードができたら、Copilot Chatに画像が表示されます。
+Once the image is uploaded, it will be displayed in Copilot Chat.
 
-その上で、次のプロンプトを入力してみましょう。
-
-```
-このプロジェクトでポモドーロタイマーのWebアプリを作成する予定です。添付の画像はそのアプリのUIモックです。FlaskとHTML/CSS/JavaScriptを使用してこのアプリを作成するにあたって、どのような設計で進めるべきか、アーキテクチャの提案をしてください。
-```
-
-すると、推奨のWebアプリケーションアーキテクチャを提案してくれます。
-
-このアーキテクチャに対して、もっとこうした方が良いという点や考慮不足の点があれば、それを指摘してみましょう。例えば次のような指摘です。
+Then, try entering the following prompt:
 
 ```
-ユニットテストのしやすさという点を考慮して、今のアーキテクチャにもし改善や追加が必要な点があればそれも書き出してください。
+We plan to create a Pomodoro timer web app in this project. The attached image is a UI mock of that app. Please suggest an architecture for creating this app using Flask and HTML/CSS/JavaScript.
 ```
 
-このやり取りを経て、アーキテクチャの設計が固まったら、一度その内容をファイルに保存してもらいましょう。そうすることで、別のチャットセッションを開いても、同じアーキテクチャの内容を参照することができます。
+This will suggest a recommended web application architecture.
+
+If there are points where you think this architecture could be better or areas that lack consideration, try pointing them out. For example, feedback like this:
 
 ```
-ここまでの会話でアーキテクチャについては固まったので、これまでの会話の内容を踏まえて、プロジェクトのルートにarchitecture.mdというファイルに、Webアプリケーションアーキテクチャ案をまとめてください。
+Considering the ease of unit testing, please list any improvements or additions needed in the current architecture.
+```
+
+After this exchange has solidified the architecture design, let's save that content to a file once. This way, even if you open a different chat session, you can reference the same architecture content.
+
+```
+Since the architecture has been decided through our conversation so far, please compile the web application architecture proposal into a file called architecture.md in the project root, based on the content of our conversation up to this point.
 ```
 
 > aside positive
 >
-> Copilot Chatでのやりとりに一区切りがついたら、新しい会話を始めることで、よりCopilotに対して明確な指示を与えることができます。新しい会話を始めるには、チャットウィンドウの上部にある「新しい会話」ボタンをクリックします。その際、今回のアーキテクチャの内容のように、今後のチャットでも参照したい内容は、今回のようにファイルに書き出して保存しておくと便利です。
+> When you reach a break in your conversation with Copilot Chat, you can give clearer instructions to Copilot by starting a new conversation. To start a new conversation, click the "New conversation" button at the top of the chat window. At that time, content you want to reference in future chats, like this architecture content, should be written to files and saved as we did here.
 
 
 
-## やることを洗い出そう
+## Let's List What Needs to be Done
 Duration: 10
 
-ここまでで、UIモックとアーキテクチャの設計が固まりました。具体的にどのような機能を実装する必要があるかを検討していきましょう。これもCopilot Chatに相談してみます。その際、pomodoro.pngとarchitecture.mdを添付しましょう。
+Up to this point, we've finalized the UI mock and architecture design. Let's consider what specific features need to be implemented. Let's also consult with Copilot Chat about this. When doing so, let's attach pomodoro.png and architecture.md.
 
 ```
-このポモドーロタイマーアプリケーションを作成するにあたって、実装する必要のある機能を洗い出してください。
+Please list the features that need to be implemented to create this Pomodoro timer application.
 ```
 
-<img src="github-copilot-workshop/img/pomodoro.png" alt="機能一覧の検討" width="400" />
+<img src="github-copilot-workshop/img/pomodoro.png" alt="Feature list consideration" width="400" />
 
-![機能洗い出しの例](github-copilot-workshop/img/10-2.list_features.png)
+![Feature listing example](github-copilot-workshop/img/10-2.list_features.png)
 
-この内容もCopilotとのチャットを通して、改善していきましょう。内容が固まったら、アーキテクチャの時と同様にこの内容もfeatures.mdというファイルにまとめて保存しておきましょう。
-
-```
-ありがとうございます。その内容で良さそうなので、実装する必要のある機能一覧をfeatures.mdというファイルに書いてください。
-```
-
-では、ここから実装を始めるわけですが、Copilotを使いこなすコツとしては、一度に大きな機能を実装しようとするのではなく、まずは小さな機能から実装していくことです。これにより、Copilotが提案するコードの精度が上がり、よりスムーズに開発を進めることができます。
-
-今回のアプリケーション開発を、どのような粒度で細分化して実装していくかについても、Copilotに相談してみましょう。ここでは、pomodoro.png、architecture.md、features.mdを添付しましょう。
+Let's also improve this content through conversation with Copilot. Once the content is finalized, let's save this content to a file called features.md, just like we did with the architecture.
 
 ```
-このポモドーロタイマーアプリケーションを段階的に実装していきたいと考えています。添付の画像とアーキテクチャ、機能一覧を踏まえて、どのような粒度で機能を実装していくべきか、段階的な実装計画を提案してください。
+Thank you. That content looks good, so please write the list of features that need to be implemented to a file called features.md.
 ```
 
-私が試したところ、6つのステップからなる計画を提案してくれました。この点についても、もっとこうしてほしいなどがあれば、Copilotに指摘してみましょう。そして、この内容も後で参照できるように、plan.mdというファイルにまとめて保存しておきましょう。その際、どういうプロンプトで指示するべきかは、みなさん自身で考えてみてください。
+Now, we'll start implementation from here, but as a tip for mastering Copilot, instead of trying to implement large features all at once, it's better to start by implementing small features first. This improves the accuracy of the code that Copilot suggests and allows for smoother development progress.
 
-## 実装しよう
+Let's also consult with Copilot about what granularity to break down and implement this application development. Here, let's attach pomodoro.png, architecture.md, and features.md.
+
+```
+I want to implement this Pomodoro timer application step by step. Based on the attached image, architecture, and feature list, please suggest a step-by-step implementation plan for what granularity features should be implemented.
+```
+
+When I tried it, it suggested a plan consisting of 6 steps. If you have suggestions like "I want this to be done differently," try pointing them out to Copilot. And save this content to a file called plan.md so it can be referenced later. In that case, think about what prompt you should use for instructions.
+
+## Let's Implement
 Duration: 30
 
-ここまでの準備が整ったので、いよいよ実装に取り掛かりましょう。前のステップで提案された実装計画に従って、段階的に機能を実装していきます。
+Now that all the preparation is complete, let's finally start implementation. We'll implement features step by step according to the implementation plan suggested in the previous step.
 
-### プロジェクト構成の準備
+### Project Structure Preparation
 
-まずは、今回のアーキテクチャに従ったプロジェクトのディレクトリ構成を作成しましょう。
+First, let's create a project directory structure according to this architecture.
 
-まずは、`architecture.md` のようなアーキテクチャを実現するにあたって、現在のプロジェクトのフォルダ構成を修正してください。必要に応じてファイルの移動や、設定ファイルの変更も行ってください。
+First, please modify the current project's folder structure to realize the architecture like `architecture.md`. Move files or change configuration files as needed.
 
-その後、`pomodoro.png`, `architecture.md`, `plan.md` を添付した上で、次のようにCopilotに指示を出してみましょう。
+Then, after attaching `pomodoro.png`, `architecture.md`, and `plan.md`, let's give Copilot the following instruction:
 
 ```
-plan.mdのステップ１を実装してください。その際、すでにこのプロジェクトにあるファイルを別のディレクトリに移動する必要があれば、その作業も実行してください。もし追加で考慮が必要なことがあれば、私に質問してください。
+Please implement step 1 of plan.md. At that time, if you need to move files that already exist in this project to another directory, please also perform that work. If there are additional considerations needed, please ask me.
 ```
 
-すると、私のケースでは以下のように検討が必要な質問をしてきました。こういった場合には、必要な情報を提供しましょう。
+Then, in my case, it asked questions that needed consideration as shown below. In such cases, provide the necessary information.
 
-![Copilotからの質問例](github-copilot-workshop/img/12-0.question_from_copilot.png)
+![Example question from Copilot](github-copilot-workshop/img/12-0.question_from_copilot.png)
 
-その後、Copilotは、ステップ1の実装を行います。実装が完了したら、Copilotは自らの判断でプロジェクトのビルドを行い、エラーがないかを確認します。エラーが発生した場合は、そのエラーを解決するために追加で修正を行います。このような自律的な動作が、エージェントモードの特徴です。
+After that, Copilot implements step 1. Once implementation is complete, Copilot builds the project on its own judgment and checks for errors. If errors occur, it makes additional fixes to resolve those errors. This kind of autonomous behavior is characteristic of agent mode.
 
-実装が完了したら、以下の点を確認してみましょう：
+Once implementation is complete, let's check the following points:
 
-1. **ディレクトリ構造**：推奨されたアーキテクチャに沿った構成になっているか
-2. **基本ファイル**：必要な基本ファイル（app.py、HTML テンプレート、CSS ファイルなど）が作成されているか
-3. **動作確認**：簡単な動作テストを行って、エラーが発生していないか
-
-
-以下が、私の場合のステップ1の実装結果です。この段階でどのようなアプリケーションになっているかは人によって異なるでしょう。
+1. **Directory structure**: Is it structured according to the recommended architecture?
+2. **Basic files**: Have necessary basic files (app.py, HTML templates, CSS files, etc.) been created?
+3. **Operation check**: Perform simple operation tests to see if any errors are occurring?
 
 
-![ステップ1実装結果例](github-copilot-workshop/img/12-1.completed_timer.png)
+The following is the result of step 1 implementation in my case. What kind of application it becomes at this stage will vary from person to person.
+
+
+![Step 1 implementation result example](github-copilot-workshop/img/12-1.completed_timer.png)
 
 
 
 
-## テストを書こう
+## Let's Write Tests
 Duration: 20
 
-このまま実装を続ける前に、実装した機能に対してユニットテストを書いておきましょう。ユニットテストを書くことで、後のステップでの変更が既存の機能に影響を与えないことを確認できます。
+Before continuing with implementation, let's write unit tests for the implemented features. By writing unit tests, we can confirm that changes in later steps don't affect existing functionality.
 
-もし前ページの段階でユニットテストも実装されている場合は、このページは読み飛ばしてください。
+If unit tests have already been implemented at the previous page stage, you can skip this page.
 
-### テストの実装
+### Test Implementation
 
-次のようなプロンプトを実行してみましょう。
+Try executing a prompt like the following:
 
 ```
-現在の実装に対して、ユニットテストが全くないので、ユニットテストを実装してください。
+There are no unit tests at all for the current implementation, so please implement unit tests.
 ```
 
-すると、Copilotエージェントはユニットテスト用の依存関係をインストールするために、コマンドを使って良いかどうかを尋ねてきます。このように、エージェントが何かのコマンドを実行する前には、必ずユーザーに確認を求めます。ここでは、必要なコマンドを実行することを許可するために、「Continue」をクリックします。
+Then, the Copilot agent will ask whether it's okay to use commands to install dependencies for unit testing. Like this, agents always ask users for confirmation before executing any command. Here, click "Continue" to allow execution of necessary commands.
 
-![Copilotによるテスト実装確認](github-copilot-workshop/img/13-0.test_for_step1.png)
+![Test implementation confirmation by Copilot](github-copilot-workshop/img/13-0.test_for_step1.png)
 
-すると、CopilotはVS Code内のターミナル内で、先ほどのコマンドを実行し、必要な依存関係をインストールします。それ以降も同様に、Copilotが何かのコマンドを実行する前には、必ずユーザーに確認を求めます。もし、そのコマンドを実行してエラーが発生した場合は、そのエラーを解決するために、エージェントは追加の修正を行います。
+Then, Copilot executes the earlier command in the terminal within VS Code and installs necessary dependencies. Similarly from then on, Copilot always asks users for confirmation before executing any command. If executing that command causes an error, the agent makes additional fixes to resolve that error.
 
 
-## 残りの機能を実装しよう
+## Let's Implement the Remaining Features
 Duration: 20
 
-ここからは、自由課題として、残りの機能を段階的に実装していきましょう。
+From here on, let's implement the remaining features step by step as a free exercise.
 
-いくつか役に立つであろうポイントをここでは紹介します。
+Here are some points that should be helpful.
 
-### UIに対して指示をしたい場合
+### When You Want to Give Instructions for UI
 
-UI上の特定の要素に対して指示を出したい場合は、UIのスクリーンショットをCopilotにアップロードすることで、その要素を認識させることができます。その際、スクリーンショットの上に特に指摘したい箇所を丸で囲むなり、矢印を引くなりして、どの要素に対して指示を出したいのかを明確にすると良いでしょう。
+When you want to give instructions for specific elements on the UI, you can make Copilot recognize those elements by uploading UI screenshots to Copilot. In that case, it's good to clearly indicate which element you want to give instructions for by circling particularly noteworthy areas on the screenshot or drawing arrows.
 
-または、現状のスクリーンショットと、期待するスクリーンショットを2枚アップロードすることで、その差分を確認してもらい、期待するUIにできるだけ近づくように指示を出すこともできます。
+Alternatively, you can upload two screenshots - the current screenshot and the expected screenshot - to have the differences checked and give instructions to get as close as possible to the expected UI.
 
-### 毎回同じような指示を出している場合
+### When You're Giving the Same Instructions Repeatedly
 
-プロンプトを書いたり、文脈を指定する際に、頻繁に同じような指示を出している場合は、Copilotにその指示を覚えさせることができます。具体的には、プロジェクト内に `.github/copilot-instructions.md` というファイルを作成し、その中に指示を書いておきます。このファイルがあると、Copilotはその指示を自動的に読み込み、以降のチャットでその指示を参照することができます。
+When writing prompts or specifying context, if you're frequently giving the same instructions, you can make Copilot remember those instructions. Specifically, create a file called `.github/copilot-instructions.md` in the project and write instructions in it. When this file exists, Copilot automatically reads those instructions and can reference them in subsequent chats.
 
-以下にカスタム指示のサンプルを示します。
+Here's a sample of custom instructions:
 
 ```markdown
-このプロジェクトは、ポモドーロタイマーをFlaskで実装するものです。
+This project implements a Pomodoro timer with Flask.
 
-以下はプロジェクトの重要なファイルです。ユーザーの指示に対して、必要に応じてこれらのファイルを参照してください。
- - `pomodoro.png`: アプリケーションのUIモックです。
- - `architecture.md`: アプリケーションのアーキテクチャドキュメントです。
- - `features.md`: 実装する機能の一覧です。
- - `plan.md`: 段階的な実装計画です。
+The following are important files in the project. Please refer to these files as needed in response to user instructions.
+ - `pomodoro.png`: UI mock of the application.
+ - `architecture.md`: Architecture document of the application.
+ - `features.md`: List of features to implement.
+ - `plan.md`: Step-by-step implementation plan.
 ```
 
-そのほかにも、プロジェクトをビルドするコマンドやテストを実行するコマンドなど、プロジェクトに特有のコマンドを記載しておくと、Copilotはそのコマンドを自動的に使用するようになります。
+Additionally, by documenting project-specific commands like commands to build the project or execute tests, Copilot will automatically use those commands.
 
-### なかなか実装が進まなかったり、バグを解決できない場合
+### When Implementation Isn't Progressing Well or Bugs Can't be Resolved
 
-このような場合には、以下のアプローチを試してみましょう。
+In such cases, try the following approaches:
 
-- デバッグ情報を出力するように指示し、その出力をCopilotに分析させる。
-- 他のモデルを試してみる。
+- Instruct to output debug information and have Copilot analyze that output.
+- Try other models.
 
-## おめでとうございます 🎉
+## Congratulations 🎉
 Duration: 5
 
-### 今日学んだこと
+### What We Learned Today
 
-このワークショップでは以下のことを学びました：
+In this workshop, we learned the following:
 
-- GitHub Copilotの基本的な使い方
-- Copilot Chatでのコード解説・改善
-- エージェント機能の活用
-- 実際のアプリケーション開発でのCopilot活用
+- Basic usage of GitHub Copilot
+- Code explanation and improvement with Copilot Chat
+- Utilizing agent functionality
+- Using Copilot in actual application development
 
-### 次のステップ
+### Next Steps
 
-- 実際のプロジェクトでCopilotを活用してみる
-- より複雑なアプリケーション開発に挑戦する
-- Copilotの新機能をキャッチアップする
+- Try using Copilot in actual projects
+- Challenge yourself with more complex application development
+- Keep up with new Copilot features
 
-### リソース
+### Resources
 
 - [GitHub Copilot Documentation](https://docs.github.com/copilot)
-- [GitHub Copilot ベストプラクティス](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+- [GitHub Copilot Best Practices](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+
+Thank you for your hard work!
 
 お疲れさまでした！
