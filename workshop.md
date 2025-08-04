@@ -883,5 +883,3 @@ In this workshop, we learned the following:
 - [GitHub Copilot Best Practices](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
 
 Thank you for your hard work!
-
-お疲れさまでした！
